@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 import os
-from distutils.core import setup
+from setuptools import setup
 
 setup(name="suseprimeindicator",
       version="0.1.0",
@@ -11,6 +11,9 @@ setup(name="suseprimeindicator",
       author_email='hellcp@opensuse.org',
       license='GPLv2',
       packages=["suseprimeindicator"],
+      install_requires=[
+            'setuptools',
+      ]
       data_files=[
           ('/usr/share/icons/hicolor/symbolic/apps/', ['icons/suseprime-symbolic.svg', 'icons/suseprime-intel-symbolic.svg', 'icons/suseprime-nvidia-symbolic.svg']),
           ('/usr/share/suseprime-appindicator/scripts', ['scripts/pkexec_nvidia', 'scripts/pkexec_intel']),
